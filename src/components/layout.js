@@ -20,19 +20,16 @@ const Layout = ({ pageTitle, children }) => {
       <header className={header}>
         <div className={headerContent}>
           <div className={ownerInfoContainer}>
-            <span className={navOwnerName}>Brian Riwu Kaho</span>
-            <span className={professionSpan}>Software Engineer</span>
+            <Link to="/" className={navLinkText}>
+              <span className={navOwnerName}>Brian Riwu Kaho</span>
+              <span className={professionSpan}>Software Engineer</span>
+            </Link>
           </div>
           <nav>
             <ul className={navLinks}>
               <li className={navLinkItem}>
-                <Link to="/" className={navLinkText}>
-                  Home
-                </Link>
-              </li>
-              <li className={navLinkItem}>
-                <Link to="/about" className={navLinkText}>
-                  About
+                <Link to="/resume" className={navLinkText}>
+                  Resume
                 </Link>
               </li>
               <li className={navLinkItem}>

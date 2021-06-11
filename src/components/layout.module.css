@@ -58,6 +58,16 @@
   flex-direction: row;
 }
 
+@media only screen and (max-width: 850px) {
+  .profession-span {
+    display: none;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+}
+
 .content-section {
   position: relative;
   margin: 0px auto;
