@@ -197,10 +197,11 @@ body {
   flex-direction: row;
   padding: 6px 0px;
 
-  .job-title {
+  .company {
     font-weight: bold;
     font-size: 22px;
     color: rebeccapurple;
+    text-decoration: none;
   }
 
   .location {
@@ -218,6 +219,10 @@ body {
   }
 }
 
+.experience {
+  margin-bottom: 16px;
+}
+
 .experience-info {
   margin: 0px;
   margin-top: 5px;
@@ -225,5 +230,11 @@ body {
 
   li {
     margin: 6px 0px;
+
+    a {
+      color: rebeccapurple;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
 }
