@@ -169,3 +169,61 @@ body {
     grid-gap: 64px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .grids {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .grids {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .two-grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px;
+  }
+}
+
+.experience-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-titles-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 6px 0px;
+
+  .job-title {
+    font-weight: bold;
+    font-size: 22px;
+    color: rebeccapurple;
+  }
+
+  .location {
+    font-size: 18px;
+    color: rebeccapurple;
+  }
+
+  .role {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .time {
+    font-weight: lighter;
+  }
+}
+
+.experience-info {
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px 22px;
+
+  li {
+    margin: 6px 0px;
+  }
+}

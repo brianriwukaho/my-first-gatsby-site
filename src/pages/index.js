@@ -16,7 +16,7 @@ const IndexPage = ({
     .slice(0, 3);
 
   return (
-    <Layout pageTitle="Hey I'm Brian!">
+    <Layout pageTitle="Hey, I'm Brian!">
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
