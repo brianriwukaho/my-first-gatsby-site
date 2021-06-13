@@ -30,7 +30,7 @@ body {
   width: 90%;
   padding-top: 0px !important;
   padding: 32px;
-  max-width: 1340px;
+  max-width: 1320px;
   margin: 0 auto;
   img {
     max-width: 100%;
@@ -197,6 +197,10 @@ body {
   flex-direction: row;
   padding: 6px 0px;
 
+  p {
+    margin: 0px;
+  }
+
   .company {
     font-weight: bold;
     font-size: 22px;
@@ -237,4 +241,26 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.contact-info {
+  padding: 0px 0px;
+  list-style-type: none;
+
+  li {
+    padding: 4px 0px;
+
+    img {
+      padding-right: 5px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.contact-me-icon {
+  height: 14px;
+  width: 14px;
 }

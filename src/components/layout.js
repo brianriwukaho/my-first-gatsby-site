@@ -56,8 +56,10 @@ export default ({ pageTitle, children }) => {
         </div>
       </header>
       <div className="site-wrapper">
-        <h2 className={heading}>{pageTitle}</h2>
-        {children}
+        <div>
+          <h2 className={heading}>{pageTitle}</h2>
+          {children}
+        </div>
       </div>
     </div>
   );

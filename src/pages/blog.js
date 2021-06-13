@@ -15,13 +15,13 @@ const BlogPage = ({
     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
-    <Layout pageTitle="Blog">
+    <Layout>
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
 
-      <h2>All posts</h2>
+      <h2>All blog posts</h2>
       <div className="grids">{Posts}</div>
     </Layout>
   );
