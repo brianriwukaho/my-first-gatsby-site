@@ -1,19 +1,26 @@
 import React from "react";
 
-const Experience = ({ children, company, location, role, time }) => {
+const Experience = ({
+  children,
+  company,
+  location,
+  role,
+  time,
+  companyWebsite,
+}) => {
   return (
     <div className="experience">
       <div className="experience-info-container">
-        <div className="experience-titles-container">
-          <a href="/" className="company">
+        <span className="experience-titles-container">
+          <a href={companyWebsite} className="company">
             {company}
           </a>
-          <span className="location">{location}</span>
-        </div>
-        <div className="experience-titles-container">
-          <span className="role">{role}</span>
-          <span className="time">{time}</span>
-        </div>
+          <p className="location">{location}</p>
+        </span>
+        <span className="experience-titles-container">
+          <p className="role">{role}</p>
+          <p className="time">{time}</p>
+        </span>
       </div>
       {children}
     </div>
