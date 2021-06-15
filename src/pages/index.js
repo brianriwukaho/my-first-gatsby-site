@@ -24,10 +24,7 @@ const IndexPage = ({
       <h1>I'm a Software Engineer in Brisbane, QLD, Australia</h1>
       <p>
         I currently work at Flight Centre as a Fullstack Engineer. I am an avid
-        video gamer, hobbyist musician and passionate software developer. In my
-        spare time you will often find me playing one of these video games
-        (tbd), recording music, or learning more about x framework or y software
-        development practice.
+        video gamer, hobbyist musician and passionate software developer.
       </p>
 
       <p>This website will server as a place to:</p>
