@@ -12,7 +12,7 @@ const ResumePage = () => {
         company="Flight Centre"
         companyWebsite="https://www.flightcentre.com.au/"
         location="Brisbane, Australia"
-        role="Fullstack Software Developer"
+        role="Fullstack Software Engineer"
         time="March 2021 - Present"
       >
         <ul className="experience-info">
