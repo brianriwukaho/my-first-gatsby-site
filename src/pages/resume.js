@@ -42,7 +42,7 @@ const ResumePage = () => {
           </li>
           <li>
             Used <a>event-driven</a> backend architecture in <a>AWS</a> using{" "}
-            <a>Golang</a> or <a>NodeJs</a> + <a>NodeJs</a> or <a>Java</a> +{" "}
+            <a>Golang</a> or <a>NodeJs</a> + <a>TypeScript</a> or <a>Java</a> +{" "}
             <a>GraalVM</a>
           </li>
           <li>
