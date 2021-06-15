@@ -141,7 +141,7 @@ const ResumePage = () => {
         companyWebsite="https://codebots.com/"
         location="Brisbane, Australia"
         role="Software Developer"
-        time="Feb. 2019 - Aug 2019"
+        time="Feb. 2019 - May 2019"
       >
         <ul className="experience-info">
           <li>
