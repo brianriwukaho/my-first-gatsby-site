@@ -2,6 +2,7 @@ backend:
   name: github
   # change repo to your git repository url
   repo: brianriwukaho/my-first-gatsby-site
+  branch: main
 
 media_folder: static/assets
 public_folder: /assets
