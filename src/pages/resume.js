@@ -80,6 +80,7 @@ const ResumePage = () => {
       </Experience>
       <Experience
         company="National Transport Insurance"
+        companyWebsite="https://www.nti.com.au/"
         location="Brisbane, Australia"
         role="Fullstack Software Developer"
         time="Sep. 2019 - April 2020"

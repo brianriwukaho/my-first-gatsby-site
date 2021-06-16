@@ -246,8 +246,11 @@ body {
 .contact-info {
   padding: 0px 0px;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
 
   li {
+    margin-right: 12px;
     padding: 4px 0px;
 
     img {
@@ -256,6 +259,7 @@ body {
 
     a {
       text-decoration: none;
+      color: black;
     }
   }
 }

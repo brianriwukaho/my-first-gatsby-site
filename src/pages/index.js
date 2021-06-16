@@ -26,7 +26,6 @@ const IndexPage = ({
         I currently work at Flight Centre as a Fullstack Engineer. I am an avid
         video gamer, hobbyist musician and passionate software developer.
       </p>
-
       <p>This website will serve as a place to:</p>
       <ul>
         <li>Showcase what interesting things I have worked on recently</li>
@@ -41,35 +40,36 @@ const IndexPage = ({
       </ul>
       <ul className="contact-info">
         <li>
-          <img src="/assets/contact/twitter.png" className="contact-me-icon" />
-          <b>Twitter</b>:{" "}
-          <b>
-            <a href="/">@briwukaho</a>
-          </b>
+          <a a href="https://twitter.com/briwukaho">
+            <img
+              src="/assets/contact/twitter.png"
+              className="contact-me-icon"
+            />
+            <b>Twitter </b>
+          </a>
         </li>
         <li>
-          <img src="/assets/contact/linkedin.png" className="contact-me-icon" />
-          <b>Linkedin</b>:{" "}
-          <b>
-            <a href="/">Brian Riwu Kaho</a>
-          </b>
+          <a href="https://www.linkedin.com/in/brian-riwu-kaho/">
+            <img
+              src="/assets/contact/linkedin.png"
+              className="contact-me-icon"
+            />
+            <b>Linkedin</b>
+          </a>
         </li>
         <li>
-          <img src="/assets/contact/github.png" className="contact-me-icon" />
-          <b>Github</b>:{" "}
-          <b>
-            <a href="/">brianriwukaho</a>
-          </b>
+          <a href="https://github.com/brianriwukaho">
+            <img src="/assets/contact/github.png" className="contact-me-icon" />
+            <b>Github</b>
+          </a>
         </li>
         <li>
-          <img src="/assets/contact/gmail.png" className="contact-me-icon" />
-          <b>Email</b>:{" "}
-          <b>
-            <a href="/">brianriwukaho@gmail.com</a>
-          </b>
+          <a href="mailto:b.riwukaho@gmail.com">
+            <img src="/assets/contact/gmail.png" className="contact-me-icon" />
+            <b>Email</b>
+          </a>
         </li>
       </ul>
-
       <h2>Recent posts</h2>
       <div className="grids">{Posts}</div>
     </Layout>

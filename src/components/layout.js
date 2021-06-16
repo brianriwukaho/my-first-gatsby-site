@@ -46,11 +46,6 @@ export default ({ pageTitle, children }) => {
                   Blog
                 </Link>
               </li>
-              <li className={navLinkItem}>
-                <Link to="/contact" className={navLinkText}>
-                  Contact
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
