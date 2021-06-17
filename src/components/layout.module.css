@@ -65,6 +65,11 @@
   .header-content {
     flex-direction: column;
   }
+
+  .nav-link-item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 .content-section {
