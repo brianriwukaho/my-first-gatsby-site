@@ -2,7 +2,7 @@
 template: BlogPost
 path: /effective-java/methods-common-to-all-objects
 date: 2021-06-18T05:24:58.932Z
-title: "Notes for Effective Java: Methods common to all objects"
+title: "Notes for Effective Java: Methods common to all objects [WIP]"
 metaDescription: effective-java
 thumbnail: /assets/java.jpeg
 ---
