@@ -136,7 +136,32 @@ All the information of the instance is provided when it is created. They are eas
 * Using static factories can create constants of frequently requested instances and serve them in future requests.
 * Internals of the immutable objects can also be shared.
 * They make great building blocks for other objects.
-* The disadvantage is that a separate object is required for distinct values. In some cases it could create a performance problem.[](https://github.com/HugoMatilla/Effective-JAVA-Summary#15-minimize-mutability)
+* The disadvantage is that a separate object is required for distinct values. In some cases it could create a performance problem.
+
+**How to deny subclassing in immutable objects**
+
+1. Making it final
+2. Make all of its constructors private or package-private and add a public static factory
+
+```
+	public class Complex {
+		private final double re;
+		private final double im;
+
+		private Complex (double re, double im){
+			this.re = re;
+			this.im = im;
+		}
+
+		public static Complex valueOf(double re, double im){
+			return new Complex(re,im);
+		}
+
+		...
+	}
+```
+
+This technique allows flexibility of multiple implementations, it's possible to tune the performance and permit to create more factories with names that clarify its function.[](https://github.com/HugoMatilla/Effective-JAVA-Summary#15-minimize-mutability)
 
 ### Summary
 
@@ -144,3 +169,5 @@ All the information of the instance is provided when it is created. They are eas
 * If a class cannot be made immutable, limit it's mutablility as much as possible
 * The natural inclination should be to declare every field **private final** unless there is a good reason to do otherwise
 * Constructors should create fully initialized objects with all of their invariants established
+
+## Item 18: Favour composition over inheritance
