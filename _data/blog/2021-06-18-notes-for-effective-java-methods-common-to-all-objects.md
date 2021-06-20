@@ -8,7 +8,7 @@ thumbnail: /assets/java.jpeg
 ---
 ## Item 10: Obey the general contract when override equals
 
-This is the right thing to do if any of the following conditions apply:
+This is not the right thing to do if any of the following conditions apply:
 
 * Each instance of the class is inherently unique
 * There is no need fo the class to provide a logical equality test
@@ -43,7 +43,7 @@ Do not be tempted to exclude significant fields from the hashcode computation to
 
 Don't provide a detailed specification for the value returned by hashCode, so clients can't reasonably depend on it; this gives you the flexibility to change it.
 
-## Item 12: Always override toString 
+## Item 12: Always override toString
 
 providing a good toString implementation makes your class much more pleasant to use and makes systems using the class easier to debug.
 
