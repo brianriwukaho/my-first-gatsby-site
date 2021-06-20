@@ -41,33 +41,49 @@ When finished writing your equals method, ask yourself these three questions: Is
 
 You must override hasCode in every class that override equals. Equal objects must have equal hash codes.
 
-Do not be tempted to exclude significant fields from the hashcode computation to improve performance.
+**The contract**
 
-Don't provide a detailed specification for the value returned by hashCode, so clients can't reasonably depend on it; this gives you the flexibility to change it.
+* When the hashCode method is invoked on the same object it must return the same value
+* Calling hashCode on the two equal objects must produce the same integer
+* If two objects are not equal it is not required that calling hashCode on each of the objects must produce distinct results.
+
+  * Producing distinct results of unequal objects may improve the performance of hashtables
+
+**A simple recipe:**
+
+1. Declare an int variable named result
+2. For each field *f* used in *equals* do:
+
+   * Compute *c*
+
+     * boolean: *(f ? 1 : 0)*
+     * byte, char, short or int: *(int) f*
+     * long: *(int) (f ^ (.f >>> 32))*
+     * float: *Float.floatToIntBits(f)*
+     * double: *Double.doubleToLongBits(f)* and compute as a long
+     * object reference: if *equals* of the reference use recutsivity, use recursivity for the *hashCode*
+     * array: each element as a separate field.
+   * Combine: *result = 31 * result + c*
+3. Return *result*
+
+* Do not be tempted to exclude significant fields from the hashcode computation to improve performance.
+* Don't provide a detailed specification for the value returned by hashCode, so clients can't reasonably depend on it; this gives you the flexibility to change it.
 
 ## Item 12: Always override toString
 
-providing a good toString implementation makes your class much more pleasant to use and makes systems using the class easier to debug.
-
-When practical, the toString method should return all of the interesting information contained in the object.
-
-Whether or not you decide to specify the format, you should clearly document your intentions.
-
-Provide programmatic access to the information contained in the value returned by toString
+* Providing a good toString implementation makes your class much more pleasant to use and makes systems using the class easier to debug.
+* When practical, the toString method should return all of the interesting information contained in the object.
+* Whether or not you decide to specify the format, you should clearly document your intentions.
+* Provide programmatic access to the information contained in the value returned by toString.
 
 ## Item 13: Override clone judiciously
 
-A class implementing Cloneable is expected to provide a provide a properly functioning public clone method.
-
-Immutable classes should never provide a clone method.
-
-The clone method functions as a constructor; you must ensure that it does no harm to the original object and that it properly establishes invariants on the clone.
-
-The Cloneable architecture is incompatible with normal use of final fields referring to mutable objects.
-
-Public clone methods should emit the throws clause.
-
-A better approach to object copying is to provide a copy constructor or copy factory.
+* A class implementing Cloneable is expected to provide a provide a properly functioning public clone method.
+* Immutable classes should never provide a clone method.
+* The clone method functions as a constructor; you must ensure that it does no harm to the original object and that it properly establishes invariants on the clone.
+* The Cloneable architecture is incompatible with normal use of final fields referring to mutable objects.
+* Public clone methods should emit the throws clause.
+* A better approach to object copying is to provide a copy constructor or copy factory.
 
 ## Item 14: Consider implementing Comparable
 
