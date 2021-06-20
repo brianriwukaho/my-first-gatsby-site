@@ -8,20 +8,22 @@ thumbnail: /assets/java.jpeg
 ---
 ## Item 10: Obey the general contract when override equals
 
-This is not the right thing to do if any of the following conditions apply:
+**You do not have to do this if:**
 
 * Each instance of the class is inherently unique
 * There is no need fo the class to provide a logical equality test
 * A superclass has already overridden equals, and the superclass behaviour is appropriate for this class
+
+**Override if:**
+
+when a class has a notion of logical equality that differs from mere object identity and a superclass has not already overridden equals. This is generally the case for value classes.
+
 * The class is private or package-private and you are certain that its equals method will never be invoked
+* Once the equals contract has been violated for an object. it is uncertain how other objects will behave when confronted with the object.
+* There is no way to extend an instantiable class and add a value component while preserving the equals contract.
+* Do not write an equals method that depends on an unreliable resource.
 
-Once the equals contract has been violated for an object. it is uncertain how other objects will behave when confronted with the object.
-
-There is no way to extend an instantiable class and add a value component while preserving the equals contract.
-
-Do not write an equals method that depends on an unreliable resource.
-
-Here is the recipe for a high-quality equals method:
+**Here is the recipe for a high-quality equals method:**
 
 1. Use the == operator to check if the argument is a reference to this object
 2. Use the instanceof operator to check if the argument has the correct type
@@ -30,7 +32,7 @@ Here is the recipe for a high-quality equals method:
 
 When finished writing your equals method, ask yourself these three questions: Is it symmetric? Is is transitive? Is it consistent?
 
-Caveats:
+**Caveats:**
 
 * Always override hashcode when you override equals
 * Don't substitute another type for Object in the equals declaration
