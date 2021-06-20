@@ -137,3 +137,10 @@ All the information of the instance is provided when it is created. They are eas
 * Internals of the immutable objects can also be shared.
 * They make great building blocks for other objects.
 * The disadvantage is that a separate object is required for distinct values. In some cases it could create a performance problem.[](https://github.com/HugoMatilla/Effective-JAVA-Summary#15-minimize-mutability)
+
+### Summary
+
+* Classes should be immutable unless there is a very good reason to make them mutable
+* If a class cannot be made immutable, limit it's mutablility as much as possible
+* The natural inclination should be to declare every field **private final** unless there is a good reason to do otherwise
+* Constructors should create fully initialized objects with all of their invariants established
